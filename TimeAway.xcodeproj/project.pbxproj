@@ -1,0 +1,463 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DCC07C8D1ACEBA87001DCFEB /* TimeAwayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC07C8C1ACEBA87001DCFEB /* TimeAwayTests.swift */; };
+		DCC07CBB1ACED707001DCFEB /* ClearSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCC07CAF1ACED707001DCFEB /* ClearSans-Bold.ttf */; };
+		DCC07CBC1ACED707001DCFEB /* ClearSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCC07CB01ACED707001DCFEB /* ClearSans-Light.ttf */; };
+		DCC07CBD1ACED707001DCFEB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCC07CB11ACED707001DCFEB /* Images.xcassets */; };
+		DCC07CBE1ACED707001DCFEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC07CB31ACED707001DCFEB /* AppDelegate.swift */; };
+		DCC07CBF1ACED707001DCFEB /* LockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC07CB41ACED707001DCFEB /* LockController.swift */; };
+		DCC07CC01ACED707001DCFEB /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCC07CB51ACED707001DCFEB /* MainWindow.xib */; };
+		DCC07CC11ACED707001DCFEB /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC07CB61ACED707001DCFEB /* MainWindowController.swift */; };
+		DCC07CC21ACED707001DCFEB /* TimeAwayPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC07CB71ACED707001DCFEB /* TimeAwayPresentationModel.swift */; };
+		DCC07CC31ACED707001DCFEB /* TimeAwayRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC07CB81ACED707001DCFEB /* TimeAwayRecord.swift */; };
+		DCC07CC41ACED707001DCFEB /* TimeAwayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC07CB91ACED707001DCFEB /* TimeAwayViewController.swift */; };
+		DCC07CC51ACED707001DCFEB /* TimeAwayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCC07CBA1ACED707001DCFEB /* TimeAwayViewController.xib */; };
+		DCC07CC71ACED75C001DCFEB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCC07CC61ACED75C001DCFEB /* MainMenu.xib */; };
+		DCC07CC91ACEF340001DCFEB /* StatusBarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC07CC81ACEF340001DCFEB /* StatusBarMenu.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DCC07C871ACEBA87001DCFEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCC07C6E1ACEBA86001DCFEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCC07C751ACEBA86001DCFEB;
+			remoteInfo = TimeAway;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DCC07C761ACEBA86001DCFEB /* TimeAway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeAway.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCC07C861ACEBA87001DCFEB /* TimeAwayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeAwayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCC07C8B1ACEBA87001DCFEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCC07C8C1ACEBA87001DCFEB /* TimeAwayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAwayTests.swift; sourceTree = "<group>"; };
+		DCC07CAF1ACED707001DCFEB /* ClearSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ClearSans-Bold.ttf"; sourceTree = "<group>"; };
+		DCC07CB01ACED707001DCFEB /* ClearSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ClearSans-Light.ttf"; sourceTree = "<group>"; };
+		DCC07CB11ACED707001DCFEB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DCC07CB31ACED707001DCFEB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DCC07CB41ACED707001DCFEB /* LockController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockController.swift; sourceTree = "<group>"; };
+		DCC07CB51ACED707001DCFEB /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		DCC07CB61ACED707001DCFEB /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		DCC07CB71ACED707001DCFEB /* TimeAwayPresentationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeAwayPresentationModel.swift; sourceTree = "<group>"; };
+		DCC07CB81ACED707001DCFEB /* TimeAwayRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeAwayRecord.swift; sourceTree = "<group>"; };
+		DCC07CB91ACED707001DCFEB /* TimeAwayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeAwayViewController.swift; sourceTree = "<group>"; };
+		DCC07CBA1ACED707001DCFEB /* TimeAwayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeAwayViewController.xib; sourceTree = "<group>"; };
+		DCC07CC61ACED75C001DCFEB /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		DCC07CC81ACEF340001DCFEB /* StatusBarMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarMenu.swift; sourceTree = "<group>"; };
+		DCC07CF31ACEFC58001DCFEB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DCC07C731ACEBA86001DCFEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCC07C831ACEBA87001DCFEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DCC07C6D1ACEBA86001DCFEB = {
+			isa = PBXGroup;
+			children = (
+				DCC07C781ACEBA86001DCFEB /* TimeAway */,
+				DCC07C891ACEBA87001DCFEB /* TimeAwayTests */,
+				DCC07C771ACEBA86001DCFEB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DCC07C771ACEBA86001DCFEB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCC07C761ACEBA86001DCFEB /* TimeAway.app */,
+				DCC07C861ACEBA87001DCFEB /* TimeAwayTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DCC07C781ACEBA86001DCFEB /* TimeAway */ = {
+			isa = PBXGroup;
+			children = (
+				DCC07CAD1ACED707001DCFEB /* assets */,
+				DCC07CB21ACED707001DCFEB /* src */,
+				DCC7FEE81ACEFCA400B58972 /* Supporting Files */,
+			);
+			path = TimeAway;
+			sourceTree = "<group>";
+		};
+		DCC07C891ACEBA87001DCFEB /* TimeAwayTests */ = {
+			isa = PBXGroup;
+			children = (
+				DCC07C8C1ACEBA87001DCFEB /* TimeAwayTests.swift */,
+				DCC07C8A1ACEBA87001DCFEB /* Supporting Files */,
+			);
+			path = TimeAwayTests;
+			sourceTree = "<group>";
+		};
+		DCC07C8A1ACEBA87001DCFEB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCC07C8B1ACEBA87001DCFEB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DCC07CAD1ACED707001DCFEB /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				DCC07CAE1ACED707001DCFEB /* fonts */,
+				DCC07CB11ACED707001DCFEB /* Images.xcassets */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		DCC07CAE1ACED707001DCFEB /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DCC07CAF1ACED707001DCFEB /* ClearSans-Bold.ttf */,
+				DCC07CB01ACED707001DCFEB /* ClearSans-Light.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		DCC07CB21ACED707001DCFEB /* src */ = {
+			isa = PBXGroup;
+			children = (
+				DCC07CB31ACED707001DCFEB /* AppDelegate.swift */,
+				DCC07CB41ACED707001DCFEB /* LockController.swift */,
+				DCC07CC61ACED75C001DCFEB /* MainMenu.xib */,
+				DCC07CB51ACED707001DCFEB /* MainWindow.xib */,
+				DCC07CB61ACED707001DCFEB /* MainWindowController.swift */,
+				DCC07CC81ACEF340001DCFEB /* StatusBarMenu.swift */,
+				DCC07CB71ACED707001DCFEB /* TimeAwayPresentationModel.swift */,
+				DCC07CB81ACED707001DCFEB /* TimeAwayRecord.swift */,
+				DCC07CB91ACED707001DCFEB /* TimeAwayViewController.swift */,
+				DCC07CBA1ACED707001DCFEB /* TimeAwayViewController.xib */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		DCC7FEE81ACEFCA400B58972 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCC07CF31ACEFC58001DCFEB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DCC07C751ACEBA86001DCFEB /* TimeAway */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCC07C901ACEBA87001DCFEB /* Build configuration list for PBXNativeTarget "TimeAway" */;
+			buildPhases = (
+				DCC07C721ACEBA86001DCFEB /* Sources */,
+				DCC07C731ACEBA86001DCFEB /* Frameworks */,
+				DCC07C741ACEBA86001DCFEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimeAway;
+			productName = TimeAway;
+			productReference = DCC07C761ACEBA86001DCFEB /* TimeAway.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DCC07C851ACEBA87001DCFEB /* TimeAwayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCC07C931ACEBA87001DCFEB /* Build configuration list for PBXNativeTarget "TimeAwayTests" */;
+			buildPhases = (
+				DCC07C821ACEBA87001DCFEB /* Sources */,
+				DCC07C831ACEBA87001DCFEB /* Frameworks */,
+				DCC07C841ACEBA87001DCFEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DCC07C881ACEBA87001DCFEB /* PBXTargetDependency */,
+			);
+			name = TimeAwayTests;
+			productName = TimeAwayTests;
+			productReference = DCC07C861ACEBA87001DCFEB /* TimeAwayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DCC07C6E1ACEBA86001DCFEB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = betriebsraum;
+				TargetAttributes = {
+					DCC07C751ACEBA86001DCFEB = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					DCC07C851ACEBA87001DCFEB = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = DCC07C751ACEBA86001DCFEB;
+					};
+				};
+			};
+			buildConfigurationList = DCC07C711ACEBA86001DCFEB /* Build configuration list for PBXProject "TimeAway" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DCC07C6D1ACEBA86001DCFEB;
+			productRefGroup = DCC07C771ACEBA86001DCFEB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DCC07C751ACEBA86001DCFEB /* TimeAway */,
+				DCC07C851ACEBA87001DCFEB /* TimeAwayTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DCC07C741ACEBA86001DCFEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCC07CC01ACED707001DCFEB /* MainWindow.xib in Resources */,
+				DCC07CBD1ACED707001DCFEB /* Images.xcassets in Resources */,
+				DCC07CC51ACED707001DCFEB /* TimeAwayViewController.xib in Resources */,
+				DCC07CBC1ACED707001DCFEB /* ClearSans-Light.ttf in Resources */,
+				DCC07CBB1ACED707001DCFEB /* ClearSans-Bold.ttf in Resources */,
+				DCC07CC71ACED75C001DCFEB /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCC07C841ACEBA87001DCFEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DCC07C721ACEBA86001DCFEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCC07CC21ACED707001DCFEB /* TimeAwayPresentationModel.swift in Sources */,
+				DCC07CC91ACEF340001DCFEB /* StatusBarMenu.swift in Sources */,
+				DCC07CBF1ACED707001DCFEB /* LockController.swift in Sources */,
+				DCC07CBE1ACED707001DCFEB /* AppDelegate.swift in Sources */,
+				DCC07CC41ACED707001DCFEB /* TimeAwayViewController.swift in Sources */,
+				DCC07CC31ACED707001DCFEB /* TimeAwayRecord.swift in Sources */,
+				DCC07CC11ACED707001DCFEB /* MainWindowController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCC07C821ACEBA87001DCFEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCC07C8D1ACEBA87001DCFEB /* TimeAwayTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DCC07C881ACEBA87001DCFEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DCC07C751ACEBA86001DCFEB /* TimeAway */;
+			targetProxy = DCC07C871ACEBA87001DCFEB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DCC07C8E1ACEBA87001DCFEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DCC07C8F1ACEBA87001DCFEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DCC07C911ACEBA87001DCFEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TimeAway/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DCC07C921ACEBA87001DCFEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TimeAway/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DCC07C941ACEBA87001DCFEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TimeAwayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimeAway.app/Contents/MacOS/TimeAway";
+			};
+			name = Debug;
+		};
+		DCC07C951ACEBA87001DCFEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TimeAwayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimeAway.app/Contents/MacOS/TimeAway";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DCC07C711ACEBA86001DCFEB /* Build configuration list for PBXProject "TimeAway" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCC07C8E1ACEBA87001DCFEB /* Debug */,
+				DCC07C8F1ACEBA87001DCFEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCC07C901ACEBA87001DCFEB /* Build configuration list for PBXNativeTarget "TimeAway" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCC07C911ACEBA87001DCFEB /* Debug */,
+				DCC07C921ACEBA87001DCFEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCC07C931ACEBA87001DCFEB /* Build configuration list for PBXNativeTarget "TimeAwayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCC07C941ACEBA87001DCFEB /* Debug */,
+				DCC07C951ACEBA87001DCFEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DCC07C6E1ACEBA86001DCFEB /* Project object */;
+}
