@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DC122C861ACFEDD9009BE65C /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC122C851ACFEDD9009BE65C /* UserDefaults.swift */; };
+		DC122C8A1AD00C74009BE65C /* TimeAwayRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC122C891AD00C74009BE65C /* TimeAwayRepository.swift */; };
 		DCC07C8D1ACEBA87001DCFEB /* TimeAwayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC07C8C1ACEBA87001DCFEB /* TimeAwayTests.swift */; };
 		DCC07CBB1ACED707001DCFEB /* ClearSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCC07CAF1ACED707001DCFEB /* ClearSans-Bold.ttf */; };
 		DCC07CBC1ACED707001DCFEB /* ClearSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCC07CB01ACED707001DCFEB /* ClearSans-Light.ttf */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		DC122C851ACFEDD9009BE65C /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		DC122C891AD00C74009BE65C /* TimeAwayRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeAwayRepository.swift; sourceTree = "<group>"; };
 		DCC07C761ACEBA86001DCFEB /* TimeAway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeAway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC07C861ACEBA87001DCFEB /* TimeAwayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeAwayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC07C8B1ACEBA87001DCFEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				DCC07CC81ACEF340001DCFEB /* StatusBarMenu.swift */,
 				DCC07CB71ACED707001DCFEB /* TimeAwayPresentationModel.swift */,
 				DCC07CB81ACED707001DCFEB /* TimeAwayRecord.swift */,
+				DC122C891AD00C74009BE65C /* TimeAwayRepository.swift */,
 				DCC07CB91ACED707001DCFEB /* TimeAwayViewController.swift */,
 				DCC07CBA1ACED707001DCFEB /* TimeAwayViewController.xib */,
 				DC122C851ACFEDD9009BE65C /* UserDefaults.swift */,
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCC07CC21ACED707001DCFEB /* TimeAwayPresentationModel.swift in Sources */,
+				DC122C8A1AD00C74009BE65C /* TimeAwayRepository.swift in Sources */,
 				DCC07CC91ACEF340001DCFEB /* StatusBarMenu.swift in Sources */,
 				DCC07CBF1ACED707001DCFEB /* LockController.swift in Sources */,
 				DCC07CBE1ACED707001DCFEB /* AppDelegate.swift in Sources */,

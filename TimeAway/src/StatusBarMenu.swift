@@ -1,10 +1,19 @@
 import Cocoa
 
+protocol StatusBarMenuDelegate: class {
+    
+    func statusBarMenu(statusBarMenu: StatusBarMenu, didSelectHistoryItem: TimeAwayPresentationModel)
+    
+}
+
 class StatusBarMenu: NSMenu {
     
-    var statusBarItem: NSStatusItem!
-    
     @IBOutlet weak var showWhenUnlockedItem: NSMenuItem!
+    @IBOutlet weak var historyItem: NSMenuItem!
+    
+    weak var menuDelegate: StatusBarMenuDelegate?
+    
+    private var statusBarItem: NSStatusItem!
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -12,7 +21,7 @@ class StatusBarMenu: NSMenu {
         setupStatusBarItem()
     }
     
-    func setupStatusBarItem() {
+    private func setupStatusBarItem() {
         statusBarItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1.0)
         statusBarItem.menu = self
         statusBarItem.image = NSImage(named:"icon_statusbar")
@@ -25,8 +34,35 @@ class StatusBarMenu: NSMenu {
             return showWhenUnlockedItem.state == NSOnState
         }
         set {
-            showWhenUnlockedItem.state = newValue ? NSOnState  : NSOffState
+            showWhenUnlockedItem.state = newValue ? NSOnState : NSOffState
         }
+    }
+    
+    var history: [TimeAwayPresentationModel] = [] {
+        didSet {
+            let historyMenu = NSMenu()
+            historyMenu.autoenablesItems = history.count == 0
+            
+            for model in history.reverse() {
+                let historyItem = NSMenuItem(title: model.menuItemTitle, action: "historyItemTapped:", keyEquivalent: "")
+                historyItem.target = self
+                historyItem.representedObject = model
+                historyItem.enabled = true
+                historyMenu.addItem(historyItem)
+            }
+            
+            if history.count == 0 {
+                historyMenu.addItem(NSMenuItem(title: "No Entries", action: nil, keyEquivalent: ""))
+            }
+            
+            setSubmenu(historyMenu, forItem: historyItem)
+        }
+    }
+   
+    func historyItemTapped(sender: AnyObject) {
+        let model = (sender as NSMenuItem).representedObject as TimeAwayPresentationModel
+        
+        menuDelegate?.statusBarMenu(self, didSelectHistoryItem: model)
     }
     
 }

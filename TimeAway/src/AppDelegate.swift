@@ -1,54 +1,77 @@
 import Cocoa
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate, LockControllerDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, LockControllerDelegate, StatusBarMenuDelegate {
     
     @IBOutlet weak var statusBarMenu: StatusBarMenu!
     
     let mainWindowController = MainWindowController(windowNibName: "MainWindow")
     let lockController = LockController()
+    let timeAwayRepository = TimeAwayRepository()
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        updateStatusBarMenu()
+        setupStatusBarMenu()
         setupLockController()
-        bringToFrontOnLaunch()
+        showRecentRecordAfterLaunch()
     }
     
     //MARK: LockController
     
-    func setupLockController() {
+    private func setupLockController() {
         lockController.delegate = self
     }
     
     func lockController(lockController: LockController, didUnlockScreen timeAwayRecord: TimeAwayRecord) {
+        timeAwayRepository.saveRecord(timeAwayRecord)
+        
+        updateStatusBarMenu()
+        
         if UserDefaults.sharedInstance.reminderEnabled {
-            mainWindowController.bringToFront()
-            mainWindowController.render(TimeAwayPresentationModel(model: timeAwayRecord))
+            showRecentRecord()
         }
     }
     
     //MARK: MainWindowController
     
-    func bringToFrontOnLaunch() {
-        if (!UserDefaults.sharedInstance.hasLaunched) {
+    private func showRecentRecordAfterLaunch() {
+        if !UserDefaults.sharedInstance.hasLaunched {
             UserDefaults.sharedInstance.hasLaunched = true
-            mainWindowController.bringToFront()
+            showRecentRecord()
+        }
+    }
+    
+    private func showRecentRecord() {
+        mainWindowController.bringToFront()
+        
+        if let recentRecord = timeAwayRepository.recentRecord {
+            mainWindowController.render(TimeAwayPresentationModel(model: recentRecord))
         }
     }
     
     //MARK: StatusBarMenu
     
-    func updateStatusBarMenu() {
+    private func setupStatusBarMenu() {
+        statusBarMenu.menuDelegate = self
         statusBarMenu.showWhenUnlockedEnabled = UserDefaults.sharedInstance.reminderEnabled
+        
+        updateStatusBarMenu()
+    }
+    
+    private func updateStatusBarMenu() {
+        statusBarMenu.history = timeAwayRepository.allRecords.map { record in TimeAwayPresentationModel(model: record) }
     }
     
     @IBAction func statusBarShowRecentTapped(sender: AnyObject) {
-        mainWindowController.bringToFront()
+        showRecentRecord()
     }
     
     @IBAction func statusBarShowWhenUnlockedTapped(sender: AnyObject) {
         statusBarMenu.showWhenUnlockedEnabled = !statusBarMenu.showWhenUnlockedEnabled
         UserDefaults.sharedInstance.reminderEnabled = statusBarMenu.showWhenUnlockedEnabled
+    }
+    
+    func statusBarMenu(statusBarMenu: StatusBarMenu, didSelectHistoryItem model: TimeAwayPresentationModel) {
+        model.copyToClipboard()
     }
     
     @IBAction func statusBarAboutTapped(sender: AnyObject) {

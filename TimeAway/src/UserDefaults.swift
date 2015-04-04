@@ -9,8 +9,8 @@ class UserDefaults {
         return Static.instance
     }
     
-    let hasLaunchedKey = "hasLaunched"
-    let reminderEnabledKey = "reminderEnabled"
+    private let hasLaunchedKey = "hasLaunched"
+    private let reminderEnabledKey = "reminderEnabled"
     
     var hasLaunched: Bool {
         get {

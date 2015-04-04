@@ -680,6 +680,9 @@
                         <action selector="statusBarShowWhenUnlockedTapped:" target="Voe-Tx-rLC" id="3s7-e8-n4i"/>
                     </connections>
                 </menuItem>
+                <menuItem title="History" id="kIA-uN-xdZ">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
                 <menuItem title="About" id="B1K-yS-o7P">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
@@ -695,6 +698,7 @@
                 </menuItem>
             </items>
             <connections>
+                <outlet property="historyItem" destination="kIA-uN-xdZ" id="cEx-tF-Dgy"/>
                 <outlet property="showWhenUnlockedItem" destination="cat-oy-yaL" id="yxx-XS-0ii"/>
             </connections>
             <point key="canvasLocation" x="-16" y="181.5"/>

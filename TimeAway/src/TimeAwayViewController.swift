@@ -12,13 +12,13 @@ class TimeAwayViewController: NSViewController {
         setupLabels()
     }
    
-    func setupBackground() {
+    private func setupBackground() {
         view.wantsLayer = true
         view.layer?.backgroundColor = NSColor.blueColor().CGColor
     }
     
-    func setupLabels() {
-        timeLabel.font = NSFont(name: "Clear Sans", size: 94.0)
+    private func setupLabels() {
+        timeLabel.font = NSFont(name: "Clear Sans", size: 92.0)
         infoLabel.font = NSFont(name: "Clear Sans Light", size: 16.0)
     }
     
@@ -27,12 +27,6 @@ class TimeAwayViewController: NSViewController {
         infoLabel.stringValue = model.info
         
         view.toolTip = model.tooltip
-    }
-    
-    func copyToClipboard() {
-        let pasteboard =  NSPasteboard.generalPasteboard()
-        pasteboard.declareTypes([NSPasteboardTypeString], owner: nil)
-        pasteboard.setString(timeLabel.stringValue, forType: NSPasteboardTypeString)
     }
     
 }

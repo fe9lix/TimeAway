@@ -1,10 +1,10 @@
-import Foundation
+import Cocoa
 
 class TimeAwayPresentationModel {
     
     private let model: TimeAwayRecord
     
-    let timeFormatter: NSDateFormatter = {
+    private let timeFormatter: NSDateFormatter = {
         let timeFormatter = NSDateFormatter()
         timeFormatter.locale = NSLocale(localeIdentifier: "en_US")
         timeFormatter.dateFormat = "HH:mm"
@@ -12,11 +12,11 @@ class TimeAwayPresentationModel {
         return timeFormatter
         }()
     
-    let dateFormatter: NSDateFormatter = {
+    private let dateFormatter: NSDateFormatter = {
         let dateFormatter = NSDateFormatter()
         dateFormatter.locale = NSLocale(localeIdentifier: "en_US")
-        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
-        dateFormatter.timeStyle = NSDateFormatterStyle.MediumStyle
+        dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
+        dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
         
         return dateFormatter
         
@@ -52,8 +52,21 @@ class TimeAwayPresentationModel {
         return "Locked: \(locked)\nUnlocked: \(unlocked)"
     }
     
+    var menuItemTitle: String {
+        let locked = dateFormatter.stringFromDate(model.lockedAt)
+        let unlocked = dateFormatter.stringFromDate(model.unlockedAt)
+        
+        return "\(time) | Locked: \(locked) | Unlocked: \(unlocked)"
+    }
+    
     init(model: TimeAwayRecord) {
         self.model = model
+    }
+    
+    func copyToClipboard() {
+        let pasteboard =  NSPasteboard.generalPasteboard()
+        pasteboard.declareTypes([NSPasteboardTypeString], owner: nil)
+        pasteboard.setString(time, forType: NSPasteboardTypeString)
     }
     
 }

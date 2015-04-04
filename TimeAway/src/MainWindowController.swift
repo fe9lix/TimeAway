@@ -2,7 +2,8 @@ import Cocoa
 
 class MainWindowController: NSWindowController {
     
-    var timeAwayViewController: TimeAwayViewController!
+    private lazy var timeAwayViewController = TimeAwayViewController(nibName: "TimeAwayViewController", bundle: nil)
+    private var model: TimeAwayPresentationModel?
 
     override func windowDidLoad() {
         super.windowDidLoad()
@@ -10,20 +11,20 @@ class MainWindowController: NSWindowController {
         addTimeAwayViewController()
     }
     
-    func addTimeAwayViewController() {
-        timeAwayViewController = TimeAwayViewController(nibName: "TimeAwayViewController", bundle: nil)
-        
-        (window?.contentView as NSView).addSubview(timeAwayViewController.view)
+    private func addTimeAwayViewController() {
+        (window?.contentView as NSView).addSubview(timeAwayViewController!.view)
     }
     
     func bringToFront() {
         NSApp.activateIgnoringOtherApps(true)
+        
         window?.center()
         window?.makeKeyAndOrderFront(self)
     }
     
     func render(model: TimeAwayPresentationModel) {
-        timeAwayViewController.render(model)
+        self.model = model
+        timeAwayViewController!.render(model)
     }
     
     override func keyDown(event: NSEvent) {
@@ -32,7 +33,7 @@ class MainWindowController: NSWindowController {
         if (isCommandKey) {
             let key = event.charactersIgnoringModifiers
             if (key == "c") {
-                timeAwayViewController.copyToClipboard()
+                model?.copyToClipboard()
             }
         }
         
