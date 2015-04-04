@@ -1,4 +1,4 @@
-import Cocoa
+import Foundation
 
 protocol LockControllerDelegate {
     
@@ -6,14 +6,12 @@ protocol LockControllerDelegate {
     
 }
 
-class LockController: NSObject {
+class LockController {
    
     var delegate: LockControllerDelegate?
     var lockedAt: NSDate?
     
-    override init() {
-        super.init()
-        
+    init() {
         registerNotifications()
     }
     

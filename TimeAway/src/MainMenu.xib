@@ -11,7 +11,11 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="TimeAway" customModuleProvider="target"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="TimeAway" customModuleProvider="target">
+            <connections>
+                <outlet property="statusBarMenu" destination="jF6-WK-v6f" id="tGn-Hb-Dn1"/>
+            </connections>
+        </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
@@ -664,10 +668,16 @@
         </menu>
         <menu id="jF6-WK-v6f" customClass="StatusBarMenu" customModule="TimeAway" customModuleProvider="target">
             <items>
-                <menuItem title="Show" id="kFQ-VJ-pOY">
+                <menuItem title="Show Recent" id="kFQ-VJ-pOY">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="statusBarShowTapped:" target="Voe-Tx-rLC" id="wd9-FC-jwe"/>
+                        <action selector="statusBarShowRecentTapped:" target="Voe-Tx-rLC" id="KGh-MK-ozt"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Show When Unlocked" id="cat-oy-yaL">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="statusBarShowWhenUnlockedTapped:" target="Voe-Tx-rLC" id="3s7-e8-n4i"/>
                     </connections>
                 </menuItem>
                 <menuItem title="About" id="B1K-yS-o7P">
@@ -684,6 +694,9 @@
                     </connections>
                 </menuItem>
             </items>
+            <connections>
+                <outlet property="showWhenUnlockedItem" destination="cat-oy-yaL" id="yxx-XS-0ii"/>
+            </connections>
             <point key="canvasLocation" x="-16" y="181.5"/>
         </menu>
     </objects>

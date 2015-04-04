@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC122C861ACFEDD9009BE65C /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC122C851ACFEDD9009BE65C /* UserDefaults.swift */; };
 		DCC07C8D1ACEBA87001DCFEB /* TimeAwayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC07C8C1ACEBA87001DCFEB /* TimeAwayTests.swift */; };
 		DCC07CBB1ACED707001DCFEB /* ClearSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCC07CAF1ACED707001DCFEB /* ClearSans-Bold.ttf */; };
 		DCC07CBC1ACED707001DCFEB /* ClearSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCC07CB01ACED707001DCFEB /* ClearSans-Light.ttf */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC122C851ACFEDD9009BE65C /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		DCC07C761ACEBA86001DCFEB /* TimeAway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeAway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC07C861ACEBA87001DCFEB /* TimeAwayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeAwayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC07C8B1ACEBA87001DCFEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				DCC07CB81ACED707001DCFEB /* TimeAwayRecord.swift */,
 				DCC07CB91ACED707001DCFEB /* TimeAwayViewController.swift */,
 				DCC07CBA1ACED707001DCFEB /* TimeAwayViewController.xib */,
+				DC122C851ACFEDD9009BE65C /* UserDefaults.swift */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				DCC07CC91ACEF340001DCFEB /* StatusBarMenu.swift in Sources */,
 				DCC07CBF1ACED707001DCFEB /* LockController.swift in Sources */,
 				DCC07CBE1ACED707001DCFEB /* AppDelegate.swift in Sources */,
+				DC122C861ACFEDD9009BE65C /* UserDefaults.swift in Sources */,
 				DCC07CC41ACED707001DCFEB /* TimeAwayViewController.swift in Sources */,
 				DCC07CC31ACED707001DCFEB /* TimeAwayRecord.swift in Sources */,
 				DCC07CC11ACED707001DCFEB /* MainWindowController.swift in Sources */,
