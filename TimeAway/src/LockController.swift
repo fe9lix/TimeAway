@@ -10,9 +10,11 @@ class LockController: NSObject {
    
     weak var delegate: LockControllerDelegate?
     
-    private var lockedAt: NSDate?
+    private var userDefaults: UserDefaults
     
-    override init() {
+    init(userDefaults: UserDefaults) {
+        self.userDefaults = userDefaults
+        
         super.init()
         
         registerNotifications()
@@ -25,12 +27,12 @@ class LockController: NSObject {
     }
     
     func screenLocked() {
-        lockedAt = NSDate()
+        userDefaults.lockedAt = NSDate()
     }
     
     func screenUnlocked() {
         let timeAwayRecord = TimeAwayRecord(
-            lockedAt: lockedAt!,
+            lockedAt: userDefaults.lockedAt ?? NSDate(),
             unlockedAt: NSDate()
         )
         

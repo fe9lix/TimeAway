@@ -6,7 +6,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, LockControllerDelegate, Stat
     @IBOutlet weak var statusBarMenu: StatusBarMenu!
     
     let mainWindowController = MainWindowController(windowNibName: "MainWindow")
-    let lockController = LockController()
+    let lockController = LockController(userDefaults: UserDefaults.sharedInstance)
     let timeAwayRepository = TimeAwayRepository()
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {

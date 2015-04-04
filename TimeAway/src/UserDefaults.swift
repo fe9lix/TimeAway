@@ -11,6 +11,7 @@ class UserDefaults {
     
     private let hasLaunchedKey = "hasLaunched"
     private let reminderEnabledKey = "reminderEnabled"
+    private let lockedAtKey = "lockedAt"
     
     var hasLaunched: Bool {
         get {
@@ -27,6 +28,16 @@ class UserDefaults {
         }
         set {
             setBool(newValue, forKey: reminderEnabledKey)
+        }
+    }
+    
+    var lockedAt: NSDate? {
+        get {
+            return standardDefaults.objectForKey(lockedAtKey) as? NSDate
+        }
+        set {
+            standardDefaults.setObject(newValue, forKey: lockedAtKey)
+            standardDefaults.synchronize()
         }
     }
     
