@@ -12,6 +12,7 @@ class UserDefaults {
     private let hasLaunchedKey = "hasLaunched"
     private let reminderEnabledKey = "reminderEnabled"
     private let lockedAtKey = "lockedAt"
+    private let timeAwayRecordsKey = "timeAwayRecords"
     
     var hasLaunched: Bool {
         get {
@@ -33,11 +34,23 @@ class UserDefaults {
     
     var lockedAt: NSDate? {
         get {
-            return standardDefaults.objectForKey(lockedAtKey) as? NSDate
+            return objectForKey(lockedAtKey) as? NSDate
         }
         set {
-            standardDefaults.setObject(newValue, forKey: lockedAtKey)
-            standardDefaults.synchronize()
+            setObject(newValue, forKey: lockedAtKey)
+        }
+    }
+    
+    var timeAwayRecords: [TimeAwayRecord] {
+        get {
+            if let data = objectForKey(timeAwayRecordsKey) as? NSData {
+                return NSKeyedUnarchiver.unarchiveObjectWithData(data) as [TimeAwayRecord]
+            }
+            return []
+        }
+        set {
+            let data = NSKeyedArchiver.archivedDataWithRootObject(newValue)
+            setObject(data, forKey: timeAwayRecordsKey)
         }
     }
     
@@ -51,6 +64,15 @@ class UserDefaults {
     
     func setBool(value: Bool, forKey key: String) {
         standardDefaults.setBool(value, forKey: key)
+        standardDefaults.synchronize()
+    }
+    
+    func objectForKey(key: String) -> AnyObject? {
+        return standardDefaults.objectForKey(key)
+    }
+    
+    func setObject(value: AnyObject?, forKey key: String) {
+        standardDefaults.setObject(value, forKey: key)
         standardDefaults.synchronize()
     }
     

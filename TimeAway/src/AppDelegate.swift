@@ -7,7 +7,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, LockControllerDelegate, Stat
     
     let mainWindowController = MainWindowController(windowNibName: "MainWindow")
     let lockController = LockController(userDefaults: UserDefaults.sharedInstance)
-    let timeAwayRepository = TimeAwayRepository()
+    let timeAwayRepository = TimeAwayRepository(userDefaults: UserDefaults.sharedInstance)
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         setupStatusBarMenu()
