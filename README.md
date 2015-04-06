@@ -1,8 +1,8 @@
 # TimeAway
 
-![TimeAway](https://github.com/fe9lix/TimeAway/blob/gh-pages/images/timeaway-window.png?raw=true)
-
 ![TimeAway](https://github.com/fe9lix/TimeAway/blob/gh-pages/images/timeaway-menu.png?raw=true)
+
+![TimeAway](https://github.com/fe9lix/TimeAway/blob/gh-pages/images/timeaway-window.png?raw=true)
 
 TimeAway is a very simple tool running in the background and logging the time when you lock and unlock the screen. 
 I've built it for looking up how long I've been away from my machine, for example when I come back from lunch. 

@@ -14,7 +14,7 @@ class TimeAwayViewController: NSViewController {
    
     private func setupBackground() {
         view.wantsLayer = true
-        view.layer?.backgroundColor = NSColor.blueColor().CGColor
+        view.layer?.backgroundColor = NSColor(red: 0.08, green: 0.34, blue: 0.60, alpha: 1.0).CGColor
     }
     
     private func setupLabels() {
