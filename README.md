@@ -16,7 +16,10 @@ Unzip the file and copy the .app file into your program folder. When you start t
 If you you want to launch TimeAway on startup (which is advisable), just add it to your login items (`Apple Logo/System Preferences/Accounts/Login Items/+`).
 
 ## Usage
-The status bar menu contains five items:
+Start the app, then lock your screen (`CTRL` + `SHIFT` + `Eject/Power`) and unlock again.
+Check the logged time in the status bar menu.
+
+The menu contains five items:
 - `Show Recent`: Displays the recent lock/unlock event and its duration.
 - `Show When Unlocked`: If enabled, displays the window each time the screen is unlocked.
 - `History`: Shows the past ten lock/unlock events and their durations.
