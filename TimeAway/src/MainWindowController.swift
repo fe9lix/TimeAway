@@ -12,7 +12,7 @@ class MainWindowController: NSWindowController {
     }
     
     private func addTimeAwayViewController() {
-        (window?.contentView as! NSView).addSubview(timeAwayViewController!.view)
+        (window?.contentView as NSView).addSubview(timeAwayViewController!.view)
     }
     
     func bringToFront() {

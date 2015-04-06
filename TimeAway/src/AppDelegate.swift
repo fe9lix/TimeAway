@@ -28,6 +28,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, LockControllerDelegate, Stat
         
         if UserDefaults.sharedInstance.reminderEnabled {
             showRecentRecord()
+        } else {
+            updateRecentRecord()
         }
     }
     
@@ -43,6 +45,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, LockControllerDelegate, Stat
     private func showRecentRecord() {
         mainWindowController.bringToFront()
         
+        updateRecentRecord()
+    }
+    
+    private func updateRecentRecord() {
         if let recentRecord = timeAwayRepository.recentRecord {
             mainWindowController.render(TimeAwayPresentationModel(model: recentRecord))
         }

@@ -44,7 +44,7 @@ class UserDefaults {
     var timeAwayRecords: [TimeAwayRecord] {
         get {
             if let data = objectForKey(timeAwayRecordsKey) as? NSData {
-                return NSKeyedUnarchiver.unarchiveObjectWithData(data) as! [TimeAwayRecord]
+                return NSKeyedUnarchiver.unarchiveObjectWithData(data) as [TimeAwayRecord]
             }
             return []
         }
