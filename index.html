@@ -34,7 +34,7 @@ TimeAway optionally also displays a popup as a reminder when you unlock the scre
 <h2>
 <a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
 
-<p>TimeAway runs on OSX (tested on OSX 10.10). Download the <a href="https://github.com/fe9lix/CodingKeys/releases/latest">latest release</a>.</p>
+<p>TimeAway runs on OSX (tested on OSX 10.10). Download the <a href="https://github.com/fe9lix/TimeAway/releases/latest">latest release</a>.</p>
 
 <p>Unzip the file and copy the .app file into your program folder. When you start the app, an icon should appear in the status bar.
 If you you want to launch TimeAway on startup (which is advisable), just add it to your login items (<code>Apple Logo/System Preferences/Accounts/Login Items/+</code>).</p>
@@ -42,15 +42,18 @@ If you you want to launch TimeAway on startup (which is advisable), just add it 
 <h2>
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
 
-<p>The status bar menu contains five items:</p>
+<p>Start the app, then lock your screen (<code>CTRL</code> + <code>SHIFT</code> + <code>Eject/Power</code>) and unlock again. Check the logged time in the status bar menu.
+(If you don't see a password prompt after unlocking, you can adjust the setting in <code>Apple Logo/System Preferences/Security &amp; Privacy/General/Require password...</code> and select a low value such as 5 sec.)</p>
+
+<p>The menu contains five items:</p>
 
 <ul>
 <li>
-<code>Show Recent</code>: Displays the recent lock/unlock event and its duration.</li>
+<code>Show Recent</code>: Displays the recent lock/unlock event and its duration. Pressing <code>CMD</code> + <code>C</code> copies the duration to the clipboard.</li>
 <li>
 <code>Show When Unlocked</code>: If enabled, displays the window each time the screen is unlocked.</li>
 <li>
-<code>History</code>: Shows the past ten lock/unlock events and their durations.</li>
+<code>History</code>: Shows the past ten lock/unlock events and their durations. Selecting an entry copies the duration to the clipboard.</li>
 <li>
 <code>About</code>: Opens this page in the web browser.</li>
 <li>
