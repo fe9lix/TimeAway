@@ -16,10 +16,9 @@ class MainWindowController: NSWindowController {
     }
     
     func bringToFront() {
-        NSApp.activateIgnoringOtherApps(true)
-        
         window?.center()
         window?.makeKeyAndOrderFront(self)
+        NSApp.activateIgnoringOtherApps(true)
     }
     
     func render(model: TimeAwayPresentationModel) {
