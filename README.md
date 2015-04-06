@@ -20,9 +20,9 @@ Start the app, then lock your screen (`CTRL` + `SHIFT` + `Eject/Power`) and unlo
 Check the logged time in the status bar menu.
 
 The menu contains five items:
-- `Show Recent`: Displays the recent lock/unlock event and its duration.
+- `Show Recent`: Displays the recent lock/unlock event and its duration. Pressing `CMD` + `C` copies the duration to the clipboard.
 - `Show When Unlocked`: If enabled, displays the window each time the screen is unlocked.
-- `History`: Shows the past ten lock/unlock events and their durations.
+- `History`: Shows the past ten lock/unlock events and their durations. Selecting an entry copies the duration to the clipboard.
 - `About`: Opens this page in the web browser.
 - `Quit`: Exits the application.
 
