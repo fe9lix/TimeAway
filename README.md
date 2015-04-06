@@ -15,9 +15,11 @@ TimeAway runs on OSX (tested on OSX 10.10). Download the [latest release](https:
 Unzip the file and copy the .app file into your program folder. When you start the app, an icon should appear in the status bar.
 If you you want to launch TimeAway on startup (which is advisable), just add it to your login items (`Apple Logo/System Preferences/Accounts/Login Items/+`).
 
+
 ## Usage
-Start the app, then lock your screen (`CTRL` + `SHIFT` + `Eject/Power`) and unlock again.
-Check the logged time in the status bar menu.
+Start the app, then lock your screen (`CTRL` + `SHIFT` + `Eject/Power`) and unlock again. Check the logged time in the status bar menu.
+(If you don't see a password prompt after unlocking, you can adjust the setting in `Apple Logo/System Preferences/Security & Privacy/General/Require password...` and select a low value such as 5 sec.)
+
 
 The menu contains five items:
 - `Show Recent`: Displays the recent lock/unlock event and its duration. Pressing `CMD` + `C` copies the duration to the clipboard.
