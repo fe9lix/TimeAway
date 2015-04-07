@@ -24,7 +24,7 @@ Start the app, then lock your screen (`CTRL` + `SHIFT` + `Eject/Power`) and unlo
 The menu contains five items:
 - `Show Recent`: Displays the recent lock/unlock event and its duration. Pressing `CMD` + `C` copies the duration to the clipboard.
 - `Show When Unlocked`: If enabled, displays the window each time the screen is unlocked.
-- `History`: Shows the past ten lock/unlock events and their durations. Selecting an entry copies the duration to the clipboard.
+- `History`: Shows the past ten lock/unlock events and their durations. Selecting an entry copies the duration to the clipboard. Selecting the last entry (`Clear Entries`) removes all events.
 - `About`: Opens this page in the web browser.
 - `Quit`: Exits the application.
 

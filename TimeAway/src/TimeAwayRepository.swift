@@ -32,4 +32,10 @@ class TimeAwayRepository: NSObject {
         userDefaults.timeAwayRecords = records
     }
     
+    func deleteAll() {
+        records.removeAll()
+        
+        userDefaults.timeAwayRecords = records
+    }
+    
 }

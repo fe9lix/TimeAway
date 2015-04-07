@@ -3,6 +3,7 @@ import Cocoa
 protocol StatusBarMenuDelegate: class {
     
     func statusBarMenu(statusBarMenu: StatusBarMenu, didSelectHistoryItem: TimeAwayPresentationModel)
+    func statusBarMenuDidClearHistory(statusBarMenu: StatusBarMenu)
     
 }
 
@@ -47,11 +48,15 @@ class StatusBarMenu: NSMenu {
                 let historyItem = NSMenuItem(title: model.menuItemTitle, action: "historyItemTapped:", keyEquivalent: "")
                 historyItem.target = self
                 historyItem.representedObject = model
-                historyItem.enabled = true
                 historyMenu.addItem(historyItem)
             }
             
-            if history.count == 0 {
+            if history.count > 0 {
+                historyMenu.addItem(NSMenuItem.separatorItem())
+                let clearHistoryItem = NSMenuItem(title: "Clear Entries", action: "historyCleared:", keyEquivalent: "")
+                clearHistoryItem.target = self
+                historyMenu.addItem(clearHistoryItem)
+            } else {
                 historyMenu.addItem(NSMenuItem(title: "No Entries", action: nil, keyEquivalent: ""))
             }
             
@@ -63,6 +68,10 @@ class StatusBarMenu: NSMenu {
         let model = (sender as NSMenuItem).representedObject as TimeAwayPresentationModel
         
         menuDelegate?.statusBarMenu(self, didSelectHistoryItem: model)
+    }
+    
+    func historyCleared(sender: AnyObject) {
+        menuDelegate?.statusBarMenuDidClearHistory(self)
     }
     
 }

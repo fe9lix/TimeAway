@@ -80,6 +80,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, LockControllerDelegate, Stat
         model.copyToClipboard()
     }
     
+    func statusBarMenuDidClearHistory(statusBarMenu: StatusBarMenu) {
+        timeAwayRepository.deleteAll()
+        
+        updateStatusBarMenu()
+    }
+    
     @IBAction func statusBarAboutTapped(sender: AnyObject) {
         NSWorkspace.sharedWorkspace().openURL(NSURL(string: "https://github.com/fe9lix/TimeAway")!)
     }
