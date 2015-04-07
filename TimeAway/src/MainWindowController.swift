@@ -1,6 +1,6 @@
 import Cocoa
 
-class MainWindowController: NSWindowController {
+class MainWindowController: NSWindowController, NSWindowDelegate {
     
     private lazy var timeAwayViewController = TimeAwayViewController(nibName: "TimeAwayViewController", bundle: nil)
     private var model: TimeAwayPresentationModel?
@@ -21,7 +21,7 @@ class MainWindowController: NSWindowController {
         NSApp.activateIgnoringOtherApps(true)
     }
     
-    func render(model: TimeAwayPresentationModel) {
+    func render(model: TimeAwayPresentationModel?) {
         self.model = model
         
         if window? != nil {

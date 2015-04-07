@@ -51,6 +51,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, LockControllerDelegate, Stat
     private func updateRecentRecord() {
         if let recentRecord = timeAwayRepository.recentRecord {
             mainWindowController.render(TimeAwayPresentationModel(model: recentRecord))
+        } else {
+            mainWindowController.render(nil)
         }
     }
     
@@ -73,6 +75,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, LockControllerDelegate, Stat
     
     @IBAction func statusBarShowWhenUnlockedTapped(sender: AnyObject) {
         statusBarMenu.showWhenUnlockedEnabled = !statusBarMenu.showWhenUnlockedEnabled
+        
         UserDefaults.sharedInstance.reminderEnabled = statusBarMenu.showWhenUnlockedEnabled
     }
     
@@ -84,6 +87,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, LockControllerDelegate, Stat
         timeAwayRepository.deleteAll()
         
         updateStatusBarMenu()
+        updateRecentRecord()
     }
     
     @IBAction func statusBarAboutTapped(sender: AnyObject) {

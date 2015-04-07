@@ -22,11 +22,18 @@ class TimeAwayViewController: NSViewController {
         infoLabel.font = NSFont(name: "Clear Sans Light", size: 16.0)
     }
     
-    func render(model: TimeAwayPresentationModel) {
-        timeLabel.stringValue = model.time
-        infoLabel.stringValue = model.info
-        
-        view.toolTip = model.tooltip
+    func render(model: TimeAwayPresentationModel?) {
+        if let model = model? {
+            timeLabel.stringValue = model.time
+            infoLabel.stringValue = model.info
+            
+            view.toolTip = model.tooltip
+        } else {
+            timeLabel.stringValue = "00:00"
+            infoLabel.stringValue = "Lock and unlock your screen..."
+            
+            view.toolTip = nil
+        }
     }
     
 }
