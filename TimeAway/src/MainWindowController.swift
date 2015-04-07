@@ -23,7 +23,10 @@ class MainWindowController: NSWindowController {
     
     func render(model: TimeAwayPresentationModel) {
         self.model = model
-        timeAwayViewController!.render(model)
+        
+        if window? != nil {
+            timeAwayViewController!.render(model)
+        }
     }
     
     override func keyDown(event: NSEvent) {
