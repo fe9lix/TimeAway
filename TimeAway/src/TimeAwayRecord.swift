@@ -17,8 +17,8 @@ class TimeAwayRecord: NSObject, NSCoding {
     }
     
     required convenience init(coder decoder: NSCoder) {
-        let lockedAt = decoder.decodeObjectForKey("lockedAt") as NSDate
-        let unlockedAt = decoder.decodeObjectForKey("unlockedAt") as NSDate
+        let lockedAt = decoder.decodeObjectForKey("lockedAt") as! NSDate
+        let unlockedAt = decoder.decodeObjectForKey("unlockedAt") as! NSDate
         
         self.init(lockedAt: lockedAt, unlockedAt: unlockedAt)
     }

@@ -23,7 +23,7 @@ class TimeAwayViewController: NSViewController {
     }
     
     func render(model: TimeAwayPresentationModel?) {
-        if let model = model? {
+        if let model = model {
             timeLabel.stringValue = model.time
             infoLabel.stringValue = model.info
             

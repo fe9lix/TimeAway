@@ -12,7 +12,7 @@ class MainWindowController: NSWindowController, NSWindowDelegate {
     }
     
     private func addTimeAwayViewController() {
-        (window?.contentView as NSView).addSubview(timeAwayViewController!.view)
+        (window?.contentView as! NSView).addSubview(timeAwayViewController!.view)
     }
     
     func bringToFront() {
@@ -24,7 +24,7 @@ class MainWindowController: NSWindowController, NSWindowDelegate {
     func render(model: TimeAwayPresentationModel?) {
         self.model = model
         
-        if window? != nil {
+        if window != nil {
             timeAwayViewController!.render(model)
         }
     }

@@ -65,7 +65,7 @@ class StatusBarMenu: NSMenu {
     }
    
     func historyItemTapped(sender: AnyObject) {
-        let model = (sender as NSMenuItem).representedObject as TimeAwayPresentationModel
+        let model = (sender as! NSMenuItem).representedObject as! TimeAwayPresentationModel
         
         menuDelegate?.statusBarMenu(self, didSelectHistoryItem: model)
     }

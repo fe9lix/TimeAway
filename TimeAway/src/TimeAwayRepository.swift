@@ -2,7 +2,7 @@ import Cocoa
 
 class TimeAwayRepository: NSObject {
     
-    private let recordLimit = 10
+    private let recordLimit = 20
 
     private var userDefaults: UserDefaults
     private var records: [TimeAwayRecord]
